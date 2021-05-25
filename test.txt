@@ -1,0 +1,51 @@
+
+Vaishnavi K J11:55
+STUDENT			
+ID	NAME	DEPT_ID	GRADE
+1	Navas	CSE	9
+2	Pradeep	CSE	9.5
+3	Aneesh	MECH	8.3
+4	Chethan	IT	8.5
+5	Harish	ECE	8
+Vaishnavi K J11:57
+Display number of students in each department
+
+
+You12:05
+select count(*) from Student
+where grade>8.5
+group by DEPT_ID;
+
+
+Vaishnavi K J12:07
+STUDENT			
+ID	NAME	DEPT_ID	GRADE
+1	Navas	1	9
+2	Pradeep	1	9.5
+3	Aneesh	2	8.3
+4	Chethan	4	8.5
+5	Harish	3	8
+			
+EMPLOYEE			
+ID	NAME	DEPT_ID	
+1	Raj	3	
+2	Nitin	2	
+3	RJ	1	
+			
+DEPT			
+ID	NAME		
+1	cse		
+2	ece		
+3	it		
+4	mech		
+You12:11
+
+Select name form stuednt 
+where dept_id ==(select dept_id from Employee);
+You12:13
+
+Select name form stuednt 
+where dept_id ==(select dept_id ,name from Employee);
+You12:18
+select name,deptid,Ename from Student full outer join Emplouee
+where Stuent.dept_id=employee.dept_id;
